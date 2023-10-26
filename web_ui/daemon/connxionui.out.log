@@ -1,0 +1,56 @@
+2023-09-12 12:32:36.318 |UI| MongoDB: Connection Established.
+2023-09-12 12:32:36.320 |UI| Server running at http://127.0.0.1:3000/
+[ 'ManageUsers',
+  'ManageParams',
+  'ViewProducts',
+  'ManageProducts',
+  'OperatePrintingStation',
+  'ViewPrintingStationList',
+  'ManagePrintingStation' ]
+2023-09-12 13:00:07.475 |UI| MongoDB: Connection Established.
+2023-09-12 13:00:07.478 |UI| Server running at http://127.0.0.1:3000/
+[ 'ManageUsers',
+  'ManageParams',
+  'ViewProducts',
+  'ManageProducts',
+  'OperatePrintingStation',
+  'ViewPrintingStationList',
+  'ManagePrintingStation' ]
+TE.zpl
+{ Err: 'printer Error: Error: ENOENT: no such file or directory, copyfile \'C:\\Users\\apex user\\Documents\\Workspace\\connxion-trysome\\printer\\Template\\TE.zpl\' -> \'C:\\Users\\apex user\\Documents\\Workspace\\connxion-trysome\\printer\\Output\\TE.zpl\'' }
+2023-09-12 13:01:39.389 |UI| MongoDB: Connection Established.
+2023-09-12 13:01:39.391 |UI| Server running at http://127.0.0.1:3000/
+TE.zpl
+{ Err: 'printer Error: Error: ENOENT: no such file or directory, copyfile \'C:\\Users\\apex user\\Documents\\Workspace\\connxion-trysome\\printer\\Template\\TE.zpl\' -> \'C:\\Users\\apex user\\Documents\\Workspace\\connxion-trysome\\printer\\Output\\TE.zpl\'' }
+TE.zpl
+Here with code 0
+Here with code 0
+2023-09-12 13:12:35.923 |UI| MongoDB: Connection Established.
+2023-09-12 13:12:35.926 |UI| Server running at http://127.0.0.1:3000/
+TE.zpl
+2023-09-12 13:12:56.731 |UI| MongoDB: Connection Established.
+2023-09-12 13:12:56.734 |UI| Server running at http://127.0.0.1:3000/
+2023-09-12 13:23:20.337 |UI| MongoDB: Connection Established.
+2023-09-12 13:23:20.340 |UI| Server running at http://127.0.0.1:3000/
+2023-09-12 13:23:25.394 |UI| MongoDB: Connection Established.
+2023-09-12 13:23:25.398 |UI| Server running at http://127.0.0.1:3000/
+2023-09-12 13:23:31.207 |UI| MongoDB: Connection Established.
+2023-09-12 13:23:31.209 |UI| Server running at http://127.0.0.1:3000/
+TE.zpl
+Here with code 0
+Here with code 0
+2023-09-12 13:27:49.781 |UI| MongoDB: Connection Established.
+2023-09-12 13:27:49.784 |UI| Server running at http://127.0.0.1:3000/
+TE.zpl
+Here with code 0
+Here with code 0
+2023-09-12 13:31:55.707 |UI| MongoDB: Connection Established.
+2023-09-12 13:31:55.709 |UI| Server running at http://127.0.0.1:3000/
+TE.zpl
+Here with code 0
+Here with code 0
+TE.zpl
+Here with code 0
+Here with code 0
+Here with code 0
+Here with code 0

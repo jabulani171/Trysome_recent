@@ -1,0 +1,267 @@
+<div class="page-title">
+  <div class="title_left">
+	<h3>FILE UPLOAD ERROR LIST</h3>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+{{#Granted}}
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+	<div class="x_panel">
+	  <div class="x_title">
+		<button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo" id='btnSearch'>Toggle Search</button>
+		<button type="button" class="btn btn-success" id='btnexport' style="display:none">Export</button>
+		  <div id="demo" class="collapse">
+		  	<div class="row">&nbsp;</div>
+		    <div class="row">
+		    	<div class="col-md-2 col-sm-2 col-xs-2">
+					<div class="form-group">
+						<label for="dtDateFrom" class="control-label">Select Date From:</label>
+						<div class='input-group date' id='dtDateFrom'>
+							<input type='text' class="form-control" id='DateFrom' />
+							<span class="input-group-addon">
+								<span class="glyphicon glyphicon-calendar"></span>
+							</span>
+						</div>
+					</div>
+		    	</div>
+		    	<div class="col-md-2 col-sm-2 col-xs-2">
+					<div class="form-group">
+						<label for="dtDateTo" class="control-label">Select Date To:</label>
+						<div class='input-group date' id='dtDateTo'>
+							<input type='text' class="form-control" id='DateTo' />
+							<span class="input-group-addon">
+								<span class="glyphicon glyphicon-calendar"></span>
+							</span>
+						</div>
+					</div>
+		    	</div>
+				<div class="col-md-2 col-sm-2 col-xs-2">
+					<label for="dtDirection" class="control-label">Direction:</label>
+					<div class='input-group' id='dtDirection'>
+						<select class="form-control" id="Direction">
+						  <option value=''></option>
+						  <option value='INCOMING'>Incoming</option>
+						  <option value='OUTGOING'>Outgoing</option>
+						</select>
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-search"></span>
+						</span>
+					</div>
+		    	</div>
+		    	<div class="col-md-3 col-sm-3 col-xs-3">
+					<label for="dtFilename" class="control-label">Filename:</label>
+					<div class='input-group' id='dtFilename'>
+						<input type='text' class="form-control" id='Filename' />
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-search"></span>
+						</span>
+					</div>
+		    	</div>
+		    	<div class="col-md-3 col-sm-3 col-xs-3">
+					<label for="dtErrorDescription" class="control-label">Error Description:</label>
+					<div class='input-group' id='dtErrorDescription'>
+						<input type='text' class="form-control" id='ErrorDescription' />
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-search"></span>
+						</span>
+					</div>
+		    	</div>
+		    </div>
+			<button type="button" class="btn btn-primary" id='QueryBtnClick'>Query</button>
+			<button type="button" id='ClearBtnClick' class="btn btn-info">Clear</button>
+  		</div>
+		<div class="clearfix"></div>
+	  </div>
+	  <div class="x_content">
+		<table width="100%" id="FileError-datatable" class="table table-striped jambo_table table-bordered nowrap">
+			<thead>
+				<tr>
+					<th>Record Date</th>
+					<th>Direction</th>
+					<th>FileName</th>
+ 					<th>ScriptNo</th>
+					<th>Error Description</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	  </div>
+	</div>
+  </div>
+ </div>
+ {{/Granted}}
+ {{^Granted}}
+ <div class="row">
+	<div class="jumbotron">
+		<div class="col-sm-12">
+			<div style="text-align:center;"><h4 class="text-danger"><b>USER NOT AUTHERISED</b></h4></div>
+		</div>
+	</div>
+ </div>
+ {{/Granted}}
+
+<script type="text/javascript">
+	var oTable;
+	$(document).ready(function() {
+		var Url = '/API/DTGetFileErrorList';
+
+		/*$('#btnSearch').click(() => {
+		    location.reload(true);
+		});*/
+
+		$('#btnexport').click(function() {
+		    $('#FileError-datatable').DataTable().buttons(0,0).trigger();
+		});
+
+		$("#ClearBtnClick").click(function(){
+			$("#DateFrom" ).val('');
+			$("#DateTo" ).val('');
+			$("#Filename" ).val('');
+			$("#Direction" ).val('');
+			$("#ErrorDescription" ).val('');
+		});
+
+		$("#QueryBtnClick").click(function(){
+			var obj = {};
+
+			obj.DateFrom = $("#DateFrom" ).val();
+			obj.DateTo = $("#DateTo" ).val();
+			obj.Filename = $("#Filename" ).val();
+			obj.Direction = $("#Direction" ).val();
+			obj.ErrorDescription = $("#ErrorDescription" ).val();
+
+			let myUrl = '/API/DTGetFileErrorList';
+			GetGridData(myUrl, obj);
+		});
+
+		$('#dtDateFrom').datetimepicker({
+		  format: 'YYYY-MM-DD'
+		});
+
+		$('#dtDateTo').datetimepicker({
+		  format: 'YYYY-MM-DD'
+		});
+
+		//var date = (new Date()).toISOString().split('T')[0];
+
+		//$("#DateFrom" ).val(date);
+		//$("#DateTo" ).val(date);
+
+		/*var initFromDate = new Date($("#DateFrom" ).val());
+		initFromDate.setDate(initFromDate.getDate() - 1);
+		var date1 = (initFromDate).toISOString().split('T')[0];
+		$("#DateFrom" ).val(date1);*/
+
+		/*var initToDate = new Date($("#DateTo" ).val());
+		initToDate.setDate(initToDate.getDate() + 1);
+		var date2 = (initToDate).toISOString().split('T')[0];
+		$("#DateTo" ).val(date2);*/
+
+		//var initObj = {};
+		//initObj.DateFrom = $("#DateFrom" ).val();
+		//initObj.DateTo = $("#DateTo" ).val();
+
+		//GetGridData(Url, initObj);
+
+		$('.collapse').collapse();
+
+		oTable = $('#FileError-datatable').DataTable({
+        	"order": [[0, "desc"]],
+            "paging": true,
+            "searching": true,
+            "pageLength": 10,
+            "processing": true,
+            "serverSide": false
+		});
+	});
+
+	function GetGridData(sUrl, sObj) {
+        if (oTable != null) {
+            oTable.destroy();
+        }
+
+        var d = new Date();
+        var dateTime = d.toLocaleString().replace('T', ' ').replace(/\..*$/, '');
+
+        $('.collapse').collapse("hide");
+
+		oTable = $('#FileError-datatable').DataTable({
+        	"order": [[0, "desc"]],
+            "paging": true,
+            "searching": false,
+            "pageLength": 10,
+            "processing": true,
+            "serverSide": true,
+			buttons: [
+				{
+					extend: 'csv',
+					action: newexportaction
+				},
+        	],
+            'ajax': {
+                'type': 'POST',
+                'url': sUrl,
+                'data': sObj,
+            },
+            'columns':[
+				{ 'data': 'CreateDate'},
+				{ 'data': 'Direction'},
+				{ 'data': 'FileName' },
+				{ 'data': 'ScriptNo'},
+				{ 'data': 'ErrorDescription'}
+			],
+            "drawCallback": function( settings, start, end, max, total, pre ) {
+            	$("#btnexport").hide();
+
+            	if(this.fnSettings().fnRecordsTotal() > 0){
+            		$("#btnexport").show();
+            	}
+    		},
+		});
+	}
+
+	function newexportaction(e, dt, button, config) {
+         var self = this;
+         var oldStart = dt.settings()[0]._iDisplayStart;
+         dt.one('preXhr', function (e, s, data) {
+             // Just this once, load all data from the server...
+             data.start = 0;
+             data.length = 2147483647;
+             dt.one('preDraw', function (e, settings) {
+                 // Call the original action function
+                 if (button[0].className.indexOf('buttons-copy') >= 0) {
+                     $.fn.dataTable.ext.buttons.copyHtml5.action.call(self, e, dt, button, config);
+                 } else if (button[0].className.indexOf('buttons-excel') >= 0) {
+                     $.fn.dataTable.ext.buttons.excelHtml5.available(dt, config) ?
+                         $.fn.dataTable.ext.buttons.excelHtml5.action.call(self, e, dt, button, config) :
+                         $.fn.dataTable.ext.buttons.excelFlash.action.call(self, e, dt, button, config);
+                 } else if (button[0].className.indexOf('buttons-csv') >= 0) {
+                     $.fn.dataTable.ext.buttons.csvHtml5.available(dt, config) ?
+                         $.fn.dataTable.ext.buttons.csvHtml5.action.call(self, e, dt, button, config) :
+                         $.fn.dataTable.ext.buttons.csvFlash.action.call(self, e, dt, button, config);
+                 } else if (button[0].className.indexOf('buttons-pdf') >= 0) {
+                     $.fn.dataTable.ext.buttons.pdfHtml5.available(dt, config) ?
+                         $.fn.dataTable.ext.buttons.pdfHtml5.action.call(self, e, dt, button, config) :
+                         $.fn.dataTable.ext.buttons.pdfFlash.action.call(self, e, dt, button, config);
+                 } else if (button[0].className.indexOf('buttons-print') >= 0) {
+                     $.fn.dataTable.ext.buttons.print.action(e, dt, button, config);
+                 }
+                 dt.one('preXhr', function (e, s, data) {
+                     // DataTables thinks the first item displayed is index 0, but we're not drawing that.
+                     // Set the property to what it was before exporting.
+                     settings._iDisplayStart = oldStart;
+                     data.start = oldStart;
+                 });
+                 // Reload the grid with the original page. Otherwise, API functions like table.cell(this) don't work properly.
+                 setTimeout(dt.ajax.reload, 0);
+                 // Prevent rendering of the full data to the DOM
+                 return false;
+             });
+         });
+         // Requery the server with the new one-time export settings
+         dt.ajax.reload();
+     }
+</script>

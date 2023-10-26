@@ -1,0 +1,17 @@
+2023-09-12 12:40:53.034 |FILE_INT| MongoDB: Connection Established.
+2023-09-12 12:41:13.063 |FILE_INT| 1 File(s) available to pickup
+[ 'TEST FILE.csv' ]
+Original path: C:\ConnXionWCS\file_integration\Incoming\New\TEST FILE.csv
+2023-09-12 12:41:13.089 |FILE_INT| filename without path: TEST FILE.csv
+2023-09-12 12:41:13.089 |FILE_INT| Dest path: C:\ConnXionWCS\file_integration\Incoming\Failed\
+2023-09-12 12:41:13.090 |FILE_INT| Dest path with filename: C:\ConnXionWCS\file_integration\Incoming\Failed\TEST FILE.csv
+2023-09-12 12:41:13.093 |FILE_INT| Duplicate Record Found For Part_Number [T420003800ORD] | Description [MTM01-27-2]
+The queue has finished processing!
+2023-09-12 12:45:33.339 |FILE_INT| 1 File(s) available to pickup
+[ 'TEST FILE.csv' ]
+Original path: C:\ConnXionWCS\file_integration\Incoming\New\TEST FILE.csv
+2023-09-12 12:45:33.348 |FILE_INT| filename without path: TEST FILE.csv
+2023-09-12 12:45:33.348 |FILE_INT| Dest path: C:\ConnXionWCS\file_integration\Incoming\Failed\
+2023-09-12 12:45:33.348 |FILE_INT| Dest path with filename: C:\ConnXionWCS\file_integration\Incoming\Failed\TEST FILE.csv
+2023-09-12 12:45:33.349 |FILE_INT| Duplicate Record Found For Part_Number [T420003800ORD] | Description [MTM01-27-2]
+The queue has finished processing!

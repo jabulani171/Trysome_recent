@@ -1,0 +1,84 @@
+2023-09-12 12:32:35 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\ConnXionWCS\node_modules\node-windows\lib\wrapper.js --file C:\ConnXionWCS\web_ui\UI.js --log "ConnXion UI wrapper" --grow 0.5 --wait 2 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-09-12 12:32:35 - Started 16324
+2023-09-12 13:00:05 - Stopping connxionui.exe
+2023-09-12 13:00:05 - ProcessKill 16324
+2023-09-12 13:00:05 - Found child process: 7688 Name: conhost.exe
+2023-09-12 13:00:05 - Found child process: 11876 Name: node.exe
+2023-09-12 13:00:05 - Stopping process 7688
+2023-09-12 13:00:05 - Send SIGINT 7688
+2023-09-12 13:00:05 - SIGINT to 7688 failed - Killing as fallback
+2023-09-12 13:00:05 - Stopping process 11876
+2023-09-12 13:00:05 - Send SIGINT 11876
+2023-09-12 13:00:05 - SIGINT to 11876 failed - Killing as fallback
+2023-09-12 13:00:05 - Stopping process 16324
+2023-09-12 13:00:05 - Send SIGINT 16324
+2023-09-12 13:00:05 - SIGINT to 16324 failed - Killing as fallback
+2023-09-12 13:00:05 - Finished connxionui.exe
+2023-09-12 13:00:06 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\ConnXionWCS\node_modules\node-windows\lib\wrapper.js --file C:\ConnXionWCS\web_ui\UI.js --log "ConnXion UI wrapper" --grow 0.5 --wait 2 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-09-12 13:00:06 - Started 17388
+2023-09-12 13:01:37 - Stopping connxionui.exe
+2023-09-12 13:01:37 - ProcessKill 17388
+2023-09-12 13:01:37 - Found child process: 14468 Name: conhost.exe
+2023-09-12 13:01:37 - Found child process: 15540 Name: node.exe
+2023-09-12 13:01:37 - Stopping process 14468
+2023-09-12 13:01:37 - Send SIGINT 14468
+2023-09-12 13:01:37 - SIGINT to 14468 failed - Killing as fallback
+2023-09-12 13:01:37 - Stopping process 15540
+2023-09-12 13:01:37 - Send SIGINT 15540
+2023-09-12 13:01:37 - SIGINT to 15540 failed - Killing as fallback
+2023-09-12 13:01:37 - Stopping process 17388
+2023-09-12 13:01:37 - Send SIGINT 17388
+2023-09-12 13:01:37 - SIGINT to 17388 failed - Killing as fallback
+2023-09-12 13:01:37 - Finished connxionui.exe
+2023-09-12 13:01:38 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\ConnXionWCS\node_modules\node-windows\lib\wrapper.js --file C:\ConnXionWCS\web_ui\UI.js --log "ConnXion UI wrapper" --grow 0.5 --wait 2 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-09-12 13:01:38 - Started 14012
+2023-09-12 13:12:33 - Stopping connxionui.exe
+2023-09-12 13:12:33 - ProcessKill 14012
+2023-09-12 13:12:33 - Found child process: 17748 Name: conhost.exe
+2023-09-12 13:12:33 - Found child process: 17292 Name: node.exe
+2023-09-12 13:12:33 - Stopping process 17748
+2023-09-12 13:12:33 - Send SIGINT 17748
+2023-09-12 13:12:33 - SIGINT to 17748 failed - Killing as fallback
+2023-09-12 13:12:33 - Stopping process 17292
+2023-09-12 13:12:33 - Send SIGINT 17292
+2023-09-12 13:12:33 - SIGINT to 17292 failed - Killing as fallback
+2023-09-12 13:12:33 - Stopping process 14012
+2023-09-12 13:12:33 - Send SIGINT 14012
+2023-09-12 13:12:33 - SIGINT to 14012 failed - Killing as fallback
+2023-09-12 13:12:33 - Finished connxionui.exe
+2023-09-12 13:12:34 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\ConnXionWCS\node_modules\node-windows\lib\wrapper.js --file C:\ConnXionWCS\web_ui\UI.js --log "ConnXion UI wrapper" --grow 0.5 --wait 2 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-09-12 13:12:34 - Started 17992
+2023-09-12 13:23:17 - Stopping connxionui.exe
+2023-09-12 13:23:17 - ProcessKill 17992
+2023-09-12 13:23:17 - Found child process: 15624 Name: conhost.exe
+2023-09-12 13:23:17 - Found child process: 15904 Name: node.exe
+2023-09-12 13:23:18 - Stopping process 15624
+2023-09-12 13:23:18 - Send SIGINT 15624
+2023-09-12 13:23:18 - SIGINT to 15624 failed - Killing as fallback
+2023-09-12 13:23:18 - Stopping process 15904
+2023-09-12 13:23:18 - Send SIGINT 15904
+2023-09-12 13:23:18 - SIGINT to 15904 failed - Killing as fallback
+2023-09-12 13:23:18 - Stopping process 17992
+2023-09-12 13:23:18 - Send SIGINT 17992
+2023-09-12 13:23:18 - SIGINT to 17992 failed - Killing as fallback
+2023-09-12 13:23:18 - Finished connxionui.exe
+2023-09-12 13:23:19 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\ConnXionWCS\node_modules\node-windows\lib\wrapper.js --file C:\ConnXionWCS\web_ui\UI.js --log "ConnXion UI wrapper" --grow 0.5 --wait 2 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-09-12 13:23:19 - Started 2988
+2023-09-12 13:27:48 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\ConnXionWCS\node_modules\node-windows\lib\wrapper.js --file C:\ConnXionWCS\web_ui\UI.js --log "ConnXion UI wrapper" --grow 0.5 --wait 2 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-09-12 13:27:48 - Started 18248
+2023-09-12 13:31:53 - Stopping connxionui.exe
+2023-09-12 13:31:53 - ProcessKill 18248
+2023-09-12 13:31:53 - Found child process: 10916 Name: conhost.exe
+2023-09-12 13:31:53 - Found child process: 9712 Name: node.exe
+2023-09-12 13:31:53 - Stopping process 10916
+2023-09-12 13:31:53 - Send SIGINT 10916
+2023-09-12 13:31:53 - SIGINT to 10916 failed - Killing as fallback
+2023-09-12 13:31:53 - Stopping process 9712
+2023-09-12 13:31:53 - Send SIGINT 9712
+2023-09-12 13:31:53 - SIGINT to 9712 failed - Killing as fallback
+2023-09-12 13:31:53 - Stopping process 18248
+2023-09-12 13:31:53 - Send SIGINT 18248
+2023-09-12 13:31:53 - SIGINT to 18248 failed - Killing as fallback
+2023-09-12 13:31:53 - Finished connxionui.exe
+2023-09-12 13:31:54 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\ConnXionWCS\node_modules\node-windows\lib\wrapper.js --file C:\ConnXionWCS\web_ui\UI.js --log "ConnXion UI wrapper" --grow 0.5 --wait 2 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-09-12 13:31:54 - Started 16232

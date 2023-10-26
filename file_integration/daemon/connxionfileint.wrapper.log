@@ -1,0 +1,8 @@
+2023-09-12 12:32:46 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\ConnXionWCS\node_modules\node-windows\lib\wrapper.js --file C:\ConnXionWCS\file_integration\file_integration.js --log "ConnXion File Int wrapper" --grow 0.5 --wait 2 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-09-12 12:32:46 - Started 10616
+2023-09-12 12:37:00 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\ConnXionWCS\node_modules\node-windows\lib\wrapper.js --file C:\ConnXionWCS\file_integration\file_integration.js --log "ConnXion File Int wrapper" --grow 0.5 --wait 2 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-09-12 12:37:01 - Started 14312
+2023-09-12 12:38:25 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\ConnXionWCS\node_modules\node-windows\lib\wrapper.js --file C:\ConnXionWCS\file_integration\file_integration.js --log "ConnXion File Int wrapper" --grow 0.5 --wait 2 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-09-12 12:38:25 - Started 3572
+2023-09-12 12:40:52 - Starting C:\Program Files\nodejs\node.exe  --harmony --max_old_space_size=4096 C:\ConnXionWCS\node_modules\node-windows\lib\wrapper.js --file C:\ConnXionWCS\file_integration\file_integration.js --log "ConnXion File Int wrapper" --grow 0.5 --wait 2 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2023-09-12 12:40:52 - Started 16848

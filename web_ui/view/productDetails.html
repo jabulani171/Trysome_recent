@@ -1,0 +1,87 @@
+<div class="page-title">
+  <div class="title_left">
+	<h3>Product Details</h3>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+{{#Granted}}
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-xs-12">
+	<div class="x_panel">
+	  <div class="x_title">
+		<h2><small>Detail records for product order</small></h2>
+		<div class="clearfix"></div>
+	  </div>
+	  <div class="x_content">
+		<table width="100%" id="product-detail-datatable" class="table table-striped jambo_table table-bordered nowrap">
+			<thead>
+				<tr>
+					<th>Part_Number</th>
+					<th>OE_No</th>
+					<th>Description</th>
+					<th>Bin_Location</th>
+					<th>Brand</th>
+					<th>Footer</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	  </div>
+	</div>
+  </div>
+ </div>
+ {{/Granted}}
+ {{^Granted}}
+ <div class="row">
+	<div class="jumbotron">
+		<div class="col-sm-12">
+			<div style="text-align:center;"><h4 class="text-danger"><b>USER NOT AUTHERISED</b></h4></div>
+		</div>
+	</div>
+ </div>
+ {{/Granted}}
+
+<script type="text/javascript">
+	var oTable;
+	$(document).ready(function() {
+		let MyId = '{{Filter}}';
+		var Url = '/API/DTGetProductDetails';
+		if(MyId){
+		 	Url += '?id=' + MyId;
+		}
+
+
+        oTable = $('#product-detail-datatable').DataTable({
+        	"order": [[0, "desc"]],
+            "paging": true,
+            "pageLength": 10,
+            "processing": true,
+            "serverSide": true,
+            'ajax': {
+                'type': 'POST',
+                'url': Url,
+            },
+            'columns':
+                [
+                {'data': 'Part_Number'},
+				{'data': 'OE_No'},
+				{'data': 'Description'},
+				{'data': 'Bin_Location'},
+				{'data': 'Brand'},
+				{'data': 'Footer'}
+				
+            ],
+            	"columnDefs": [
+                {
+                    "searchable": false,
+                    "orderable": false,
+                    "targets": 4
+                }
+				]
+		});
+	});
+
+
+</script>

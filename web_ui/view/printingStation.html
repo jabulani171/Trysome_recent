@@ -1,0 +1,85 @@
+
+<h1 class="text-center" ><b  class="text-danger">Printing Station {{Station}}</b></h1>
+
+<div class="clearfix"></div>
+
+<div class="row" id="StnScreen">
+<div class="col-lg-1"></div>
+  <div class="col-lg-10">
+    <div class="container">
+        <div class="jumbotron">
+            <div class="row">
+               <div class="col-lg-4"></div>
+                 <div class="col-lg-4">
+                    <div><h3 ><label><b>Enter Part Number</b></label></h3></div>
+                    <input type="text" id="Part_Number" value="">
+                    <div><h3 ><label><b>Enter Number of Prints</b></label></h3></div>
+                    <input type="text" id="PrintNo" value="">
+                    
+                  </div>
+               </div>
+<br>
+               <div class="row">
+                <div class="col-lg-4"></div>
+                  <div class="col-lg-4">
+               <button class="btn btn-info btn-lg" type="submit" id="submit">Submit</button>
+               
+            </div>
+        </div>
+
+     
+           </div>
+       </div>
+   </div>
+</div>
+
+<script type="text/javascript">
+
+ $(document).on("click", "#submit", function () {
+
+ 
+    let AllGood = true;
+    var obj = {};
+
+    let Part_Number = $("#Part_Number").val();
+    let PrintNo = $("#PrintNo").val();
+
+    if(Part_Number){
+if(PrintNo > 0){
+obj.Part_Number = Part_Number;
+obj.PrintNo = PrintNo;
+
+$.ajax({
+        type: "POST",
+        url: '/API/PrintingStation',
+        data: JSON.stringify(obj),
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
+})
+.done(function(data){
+   
+        if(data.Err){
+            alert(data.Err);
+            location.reload(true);
+        }
+        else{
+
+            alert("Part_Number "+data.Part_Number+" has printed "+PrintNo);
+            location.reload(true);
+        }
+    
+
+});
+
+}
+else{
+    alert('Please Enter the Number of Prints required');
+}
+    }
+    else{
+        alert('Please Enter the Part_Number');
+    }
+ });
+
+</script>
+
